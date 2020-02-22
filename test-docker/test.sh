@@ -8,4 +8,4 @@ ros use ${lisp}
 dir=/root/.roswell/local-projects/target
 ln -s /github/workspace ${dir}
 cd ${dir}
-/bin/sh -c 'rove *.asd'
+rove $(ls *.asd | head -n 1)
