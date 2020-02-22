@@ -5,5 +5,7 @@ set -eux
 lisp=$1
 ros use ${lisp}
 
-cd ~/.roswell/local-projects/target
+dir=~/.roswell/local-projects/target
+ln -s /github/workspace ${dir}
+cd ${dir}
 rove *.asd
