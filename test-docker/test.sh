@@ -2,7 +2,8 @@
 
 set -eux
 
-ros use ${LISP}
+lisp=$1
+ros use ${lisp}
 
 cd ~/.roswell/local-projects/target
 rove *.asd
