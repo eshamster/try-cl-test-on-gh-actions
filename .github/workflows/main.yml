@@ -10,6 +10,6 @@ jobs:
     steps:
     - name: Test step
       id: test
-      uses: eshamster/try-cl-test-on-gh-actions@v0.1.7
+      uses: eshamster/try-cl-test-on-gh-actions@v0.1.8
       with:
         lisp: '${{ matrix.lisp }}'

@@ -6,6 +6,10 @@ lisp=$1
 ros use ${lisp}
 
 dir=/root/.roswell/local-projects/target
-ln -s /github/workspace ${dir}
+cp -vR /github/workspace ${dir}
 cd ${dir}
-rove $(ls *.asd | head -n 1)
+# - for test - #
+pwd
+ls
+# ----- #
+rove *.asd
