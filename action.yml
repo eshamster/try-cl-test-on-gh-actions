@@ -5,8 +5,8 @@ inputs:
     description: 'Name of Common Lisp implementation'
     required: true
     default: 'sbcl-bin'
-  runs:
-    using: 'docker'
-    image: 'test-docker/Dockerfile'
-    args:
-      - ${{ inputs.lisp }}
+runs:
+  using: 'docker'
+  image: 'test-docker/Dockerfile'
+  args:
+    - ${{ inputs.lisp }}
