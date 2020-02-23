@@ -5,11 +5,6 @@ set -eux
 lisp=$1
 ros use ${lisp}
 
-find / -name "*.asd"
-echo "--------------------"
-find /github
-
-dir=/root/.roswell/local-projects/target
-ln -s ${HOME} ${dir}
-cd ${dir}
+# Note: Assume that repository is checkout to home folder in previous step
+cd ~
 rove *.asd
