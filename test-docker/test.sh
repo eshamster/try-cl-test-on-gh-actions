@@ -11,15 +11,3 @@ dir=/root/.roswell/local-projects/target
 ln -s /github/workspace ${dir}
 cd ${dir}
 rove *.asd
-
-ros run -e '(ql:register-local-projects)' -q
-rove *.asd
-
-cd
-rm -rf ${dir}
-cp -R /github/workspace ${dir}
-cd ${dir}
-rove *.asd
-
-ros run -e '(ql:register-local-projects)' -q
-rove *.asd
