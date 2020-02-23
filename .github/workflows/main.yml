@@ -8,8 +8,10 @@ jobs:
         lisp: [sbcl-bin, ccl-bin]
     name: A job to test Common Lisp project
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Test step
       id: test
-      uses: eshamster/try-cl-test-on-gh-actions@v0.1.11
+      uses: eshamster/try-cl-test-on-gh-actions@v0.1.12
       with:
         lisp: '${{ matrix.lisp }}'
