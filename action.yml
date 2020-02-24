@@ -1,12 +1,16 @@
 name: 'Test Common Lisp'
 description: 'Run test of Common Lisp project using rove on Docker'
 inputs:
-  lisp:  # id of input
+  lisp:
     description: 'Name of Common Lisp implementation'
     required: true
     default: 'sbcl-bin'
+  installTargets:
+    description: 'Comma separated installation targets that can be installed by "ros install"'
+    required: false
 runs:
   using: 'docker'
   image: 'test-docker/Dockerfile'
   args:
     - ${{ inputs.lisp }}
+    - ${{ inputs.installTargets }}
