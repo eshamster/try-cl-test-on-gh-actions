@@ -16,7 +16,13 @@ This action tests Common Lisp project under the following conditions.
 
 ## Usage
 
-Put `.github/workflows/xxx.yml` like the following to your Common Lisp project.
+- inputs
+    - `lisp`: A name of Common Lisp implementation. Currently, the followings can be used.
+        - `sbcl-bin`
+        - `ccl-bin`
+    - `installTargets` [optional]: Comma separated installation targets that can be installed by `ros install`
+
+e.g. Put `.github/workflows/xxx.yml` like the following to your Common Lisp project.
 
 ```yml
 on: [push]
@@ -33,9 +39,11 @@ jobs:
       uses: actions/checkout@v2
     - name: Test step
       id: test
-      uses: eshamster/try-cl-test-on-gh-actions@v0.2.2
+      uses: eshamster/try-cl-test-on-gh-actions@v0.3.0
       with:
         lisp: '${{ matrix.lisp }}'
+        # optional
+        installTargets: 'eshamster/ps-experiment,eshamster/cl-ps-ecs'
 ```
 
 ## License
