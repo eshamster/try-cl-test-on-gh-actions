@@ -39,7 +39,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Test step
       id: test
-      uses: eshamster/try-cl-test-on-gh-actions@v0.3.0
+      uses: eshamster/try-cl-test-on-gh-actions@v0.3.1
       with:
         lisp: '${{ matrix.lisp }}'
         # optional

@@ -21,4 +21,4 @@ cd ${dir}
 rove *.asd 2>&1 | tee /tmp/test.log
 # Note: In Clozure CL, terminating debug console finishes in errcode 0,
 # so grep message to check if the test has actually run.
-grep "test passed" /tmp/test.log
+grep -E "tests? passed" /tmp/test.log
