@@ -13,6 +13,7 @@ if [ "${install_targets}" != "" ]; then
 fi
 
 ros use ${lisp}
+ros run -- --version
 
 # Note: Assume that repository is checkout to workspace folder in previous step
 dir=/root/.roswell/local-projects/target
